@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://1691469549.github.io</id>
     <title>MyWeb</title>
-    <updated>2021-02-25T08:03:18.929Z</updated>
+    <updated>2021-02-25T08:08:35.838Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://1691469549.github.io"/>
     <link rel="self" href="https://1691469549.github.io/atom.xml"/>
@@ -20,11 +20,73 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>本地数据文件修改，不同版本文件位置不同，但玩家数据都会存放在character.json内，一般情况下实在user文件夹下，参考路径F:\taolitkf\cowtransfer\TKFv1.27-R5\server-r5\user\profiles\1\character.json</p>
 <!-- more -->
-<p>&lt;1&gt;修改角色血量（通用）</p>
+<p>###&lt;1&gt;修改角色血量（通用）</p>
 <p>在character.json文件中搜索Health，对照代码修改对应身体部位目前血量和最大血量值即可，二者相等，数值无限制，下值供参考<br>
-<code>&quot;Health&quot;: { &quot;BodyParts&quot;: { &quot;Head&quot;: { //头部 &quot;Health&quot;: { &quot;Current&quot;: 500, //目前血量，修改此处 &quot;Maximum&quot;: 500 //最大血量，修改此处与上值保持相同 }, &quot;Effects&quot;: null }, &quot;Chest&quot;: { //胸部 &quot;Health&quot;: { &quot;Current&quot;: 500, &quot;Maximum&quot;: 500 }, &quot;Effects&quot;: null }, &quot;Stomach&quot;: { //胃部 &quot;Health&quot;: { &quot;Current&quot;: 500, &quot;Maximum&quot;: 500 }, &quot;Effects&quot;: null }, &quot;LeftArm&quot;: { //左臂 &quot;Health&quot;: { &quot;Current&quot;: 500, &quot;Maximum&quot;: 500 }, &quot;Effects&quot;: null }, &quot;RightArm&quot;: { //右臂 &quot;Health&quot;: { &quot;Current&quot;: 500, &quot;Maximum&quot;: 500 }, &quot;Effects&quot;: null }, &quot;LeftLeg&quot;: { //左腿，腿容易被修，改大点 &quot;Health&quot;: { &quot;Current&quot;: 1000, &quot;Maximum&quot;: 1000 }, &quot;Effects&quot;: null }, &quot;RightLeg&quot;: { //右腿 &quot;Health&quot;: { &quot;Current&quot;: 1000, &quot;Maximum&quot;: 1000 }, &quot;Effects&quot;: null } }, &quot;Energy&quot;: { //饥饿 &quot;Current&quot;: 200, &quot;Maximum&quot;: 200 }, &quot;Hydration&quot;: { //口渴 &quot;Current&quot;: 200, &quot;Maximum&quot;: 200 } },</code></p>
-<p>注：不要直接复制代码，容易发生转码错误或漏符，对照修改即可！！！<br>
-&lt;2&gt;</p>
+&quot;Health&quot;: {<br>
+&quot;BodyParts&quot;: {<br>
+&quot;Head&quot;: {                              //头部<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 500,           //目前血量，修改此处<br>
+&quot;Maximum&quot;: 500        //最大血量，修改此处与上值保持相同<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;Chest&quot;: {                              //胸部<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 500,<br>
+&quot;Maximum&quot;: 500<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;Stomach&quot;: {                           //胃部<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 500,<br>
+&quot;Maximum&quot;: 500<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;LeftArm&quot;: {                              //左臂<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 500,<br>
+&quot;Maximum&quot;: 500<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;RightArm&quot;: {                              //右臂<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 500,<br>
+&quot;Maximum&quot;: 500<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;LeftLeg&quot;: {                               //左腿，腿容易被修，改大点<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 1000,<br>
+&quot;Maximum&quot;: 1000<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;RightLeg&quot;: {                             //右腿<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 1000,<br>
+&quot;Maximum&quot;: 1000<br>
+},<br>
+&quot;Effects&quot;: null<br>
+}<br>
+},<br>
+&quot;Energy&quot;: {                                   //饥饿<br>
+&quot;Current&quot;: 200,<br>
+&quot;Maximum&quot;: 200<br>
+},<br>
+&quot;Hydration&quot;: {                              //口渴<br>
+&quot;Current&quot;: 200,<br>
+&quot;Maximum&quot;: 200<br>
+}<br>
+},</p>
+<blockquote>
+<p>注：不要直接复制代码，容易发生转码错误或漏符，对照修改即可！！！</p>
+</blockquote>
+<p>###&lt;2&gt;</p>
 ]]></content>
     </entry>
 </feed>
