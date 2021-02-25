@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>【逃离塔克夫】数据修改-character.json | MyWeb</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://1691469549.github.io/favicon.ico?v=1614239746015">
+<link rel="stylesheet" href="https://1691469549.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="本地数据文件修改，不同版本文件位置不同，但玩家数据都会存放在character.json内，一般情况下实在user文件夹下，参考路径F:\taolitkf\cowtransfer\TKFv1.27-R5\server-r5\user\pro..." />
+    <meta name="keywords" content="逃离塔克夫-数据修改" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://1691469549.github.io">
+        <img src="https://1691469549.github.io/images/avatar.png?v=1614239746015" class="site-logo">
+        <h1 class="site-title">MyWeb</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      交流与分享
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">馒头拿来摸摸</a> | <a class="rss" href="https://1691469549.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">【逃离塔克夫】数据修改-character.json</h2>
+            <div class="post-date">2021-02-25</div>
+            
+              <div class="feature-container" style="background-image: url('https://1691469549.github.io/post-images/tao-chi-ta-ke-fu-shu-ju-xiu-gai-characterjson.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>本地数据文件修改，不同版本文件位置不同，但玩家数据都会存放在character.json内，一般情况下实在user文件夹下，参考路径F:\taolitkf\cowtransfer\TKFv1.27-R5\server-r5\user\profiles\1\character.json</p>
+<!-- more -->
+<pre><code>&lt;1&gt;修改角色血量（通用）
+</code></pre>
+<p>在character.json文件中搜索Health，对照代码修改对应身体部位目前血量和最大血量值即可，二者相等，数值无限制，下值供参考<br>
+&quot;Health&quot;: {<br>
+&quot;BodyParts&quot;: {<br>
+&quot;Head&quot;: {                              //头部<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 500,           //目前血量，修改此处<br>
+&quot;Maximum&quot;: 500        //最大血量，修改此处与上值保持相同<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;Chest&quot;: {                              //胸部<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 500,<br>
+&quot;Maximum&quot;: 500<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;Stomach&quot;: {                           //胃部<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 500,<br>
+&quot;Maximum&quot;: 500<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;LeftArm&quot;: {                              //左臂<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 500,<br>
+&quot;Maximum&quot;: 500<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;RightArm&quot;: {                              //右臂<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 500,<br>
+&quot;Maximum&quot;: 500<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;LeftLeg&quot;: {                               //左腿，腿容易被修，改大点<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 1000,<br>
+&quot;Maximum&quot;: 1000<br>
+},<br>
+&quot;Effects&quot;: null<br>
+},<br>
+&quot;RightLeg&quot;: {                             //右腿<br>
+&quot;Health&quot;: {<br>
+&quot;Current&quot;: 1000,<br>
+&quot;Maximum&quot;: 1000<br>
+},<br>
+&quot;Effects&quot;: null<br>
+}<br>
+},<br>
+&quot;Energy&quot;: {                                   //饥饿<br>
+&quot;Current&quot;: 200,<br>
+&quot;Maximum&quot;: 200<br>
+},<br>
+&quot;Hydration&quot;: {                              //口渴<br>
+&quot;Current&quot;: 200,<br>
+&quot;Maximum&quot;: 200<br>
+}<br>
+},</p>
+<p>注：不要直接复制代码，容易发生转码错误或漏符，对照修改即可！！！<br>
+&lt;2&gt;</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://1691469549.github.io/tag/h2lLusYMQ/" class="tag">
+                    逃离塔克夫-数据修改
+                  </a>
+                
+              </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
