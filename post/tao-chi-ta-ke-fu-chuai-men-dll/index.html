@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>【逃离塔科夫】数据修改-游戏本体数据修改 | MyWeb</title>
+<title>【逃离塔克夫】踹门Dll | MyWeb</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,10 +18,12 @@
 
 
 
-    <meta name="description" content="游戏本体数据修改要记得备份源文件，防止改崩
+    <meta name="description" content="钥匙太多带不过来？不慌，直接修改开门策略，所有门一脚踹开！
 
-" />
-    <meta name="keywords" content="" />
+需下载反编译软件dnspy，在GitHub上下载即可
+
+文件路径：&gt;F:TKFv1.27-R5\client\EscapeFromTarkov_Data\Managed\A..." />
+    <meta name="keywords" content="逃离塔克夫-数据修改" />
   </head>
   <body>
     <div id="app" class="main">
@@ -92,21 +94,59 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">【逃离塔科夫】数据修改-游戏本体数据修改</h2>
+            <h2 class="post-title">【逃离塔克夫】踹门Dll</h2>
             <div class="post-date">2021-02-25</div>
             
             <div class="post-content" v-pre>
-              <p>游戏本体数据修改要记得备份源文件，防止改崩</p>
+              <p>钥匙太多带不过来？不慌，直接修改开门策略，所有门一脚踹开！</p>
 <!-- more -->
+<p><strong>需下载反编译软件dnspy，在GitHub上下载即可</strong></p>
+<blockquote>
+<p>文件路径：&gt;F:TKFv1.27-R5\client\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</p>
+</blockquote>
+<p>在dnspy中搜索方法door.BreachSuccessRoll,点击修改方法</p>
+<figure data-type="image" tabindex="1"><img src="https://1691469549.github.io/post-images/1614263583365.png" alt="" loading="lazy"></figure>
+<p>将方法修改为下图所示即可</p>
+<figure data-type="image" tabindex="2"><img src="https://1691469549.github.io/post-images/1614263639861.png" alt="" loading="lazy"></figure>
+<p>这是我已经改好的代码</p>
+<pre><code class="language-c#">public partial class Door : WorldInteractiveObject
+	{
+		// Token: 0x06008B80 RID: 35712 RVA: 0x0030EDC4 File Offset: 0x0030CFC4
+		public bool BreachSuccessRoll(Vector3 yourPosition)
+		{
+			bool canBeBreached = this.CanBeBreached;
+			if (this.Operatable)
+			{
+				Vector3 vector = base.transform.TransformPoint(this.viewTarget1) - yourPosition;
+				Vector3 a = base.GetDoorRotation(this.GetAngle(EDoorState.Shut)) * WorldInteractiveObject.GetRotationAxis(this.DoorForward, base.transform);
+				Vector3 b = base.GetDoorRotation(this.GetAngle(EDoorState.Open)) * WorldInteractiveObject.GetRotationAxis(this.DoorForward, base.transform);
+				Vector3 vector2 = a + b;
+				Vector2.Dot(new Vector2(vector.x, vector.z).normalized, new Vector2(vector2.x, vector2.z).normalized);
+				return true;
+			}
+			return false;
+		}
+	}
+
+</code></pre>
+<p>修改后清理缓存启动游戏，所有用钥匙开的门全部一脚踹开😉</p>
 
             </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://1691469549.github.io/tag/h2lLusYMQ/" class="tag">
+                    逃离塔克夫-数据修改
+                  </a>
+                
+              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://1691469549.github.io/post/tao-chi-ta-ke-fu-shu-ju-xiu-gai-characterjson/">
+                <a href="https://1691469549.github.io/post/tao-chi-ta-ke-fu-shu-ju-xiu-gai-you-xi-ben-ti-shu-ju-xiu-gai/">
                   <h3 class="post-title">
-                    【逃离塔克夫】数据修改-character.json
+                    【逃离塔科夫】数据修改-游戏本体数据修改
                   </h3>
                 </a>
               </div>
