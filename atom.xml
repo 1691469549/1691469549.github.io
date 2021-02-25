@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://1691469549.github.io</id>
     <title>MyWeb</title>
-    <updated>2021-02-25T04:21:00.964Z</updated>
+    <updated>2021-02-25T04:32:06.352Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://1691469549.github.io"/>
     <link rel="self" href="https://1691469549.github.io/atom.xml"/>
@@ -11,12 +11,15 @@
     <icon>https://1691469549.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MyWeb</rights>
     <entry>
-        <title type="html"><![CDATA[Hello]]></title>
-        <id>https://1691469549.github.io/post/hello/</id>
-        <link href="https://1691469549.github.io/post/hello/">
+        <title type="html"><![CDATA[Welcome]]></title>
+        <id>https://1691469549.github.io/post/welcome/</id>
+        <link href="https://1691469549.github.io/post/welcome/">
         </link>
-        <updated>2021-02-25T04:18:46.000Z</updated>
-        <content type="html"><![CDATA[<p>这里是我的个人主页，我将会以文章的形式将我所掌握的技术分享给大家，如有不足欢迎指正。</p>
+        <updated>2021-02-25T04:21:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>感谢您的到来😘</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>感谢您的到来😘</p>
+<!-- more -->
 ]]></content>
     </entry>
 </feed>
