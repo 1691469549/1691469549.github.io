@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://1691469549.github.io/favicon.ico?v=1614241079656">
+<link rel="shortcut icon" href="https://1691469549.github.io/favicon.ico?v=1614245473135">
 <link rel="stylesheet" href="https://1691469549.github.io/styles/main.css">
 
 
@@ -28,7 +28,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://1691469549.github.io">
-        <img src="https://1691469549.github.io/images/avatar.png?v=1614241079656" class="site-logo">
+        <img src="https://1691469549.github.io/images/avatar.png?v=1614245473135" class="site-logo">
         <h1 class="site-title">MyWeb</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -101,72 +101,268 @@
 <!-- more -->
 <h3 id="1修改角色血量通用"><strong>&lt;1&gt;修改角色血量（通用）</strong></h3>
 <p>在character.json文件中搜索Health，对照代码修改对应身体部位目前血量和最大血量值即可，二者相等，数值无限制，下值供参考</p>
-<pre><code>&quot;Health&quot;: {
-    &quot;BodyParts&quot;: {
-           &quot;Head&quot;: {                              //头部
-               &quot;Health&quot;: {
-                   &quot;Current&quot;: 500,           //目前血量，修改此处
-                   &quot;Maximum&quot;: 500        //最大血量，修改此处与上值保持相同
-               },
-               &quot;Effects&quot;: null
-           },
-           &quot;Chest&quot;: {                              //胸部
-               &quot;Health&quot;: {
-                   &quot;Current&quot;: 500,
-                   &quot;Maximum&quot;: 500
-               },
-               &quot;Effects&quot;: null
-           },
-           &quot;Stomach&quot;: {                           //胃部
-               &quot;Health&quot;: {
-                   &quot;Current&quot;: 500,
-                   &quot;Maximum&quot;: 500
-               },
-               &quot;Effects&quot;: null
-           },
-           &quot;LeftArm&quot;: {                              //左臂
-               &quot;Health&quot;: {
-                   &quot;Current&quot;: 500,
-                   &quot;Maximum&quot;: 500
-               },
-               &quot;Effects&quot;: null
-           },
-           &quot;RightArm&quot;: {                              //右臂
-               &quot;Health&quot;: {
-                   &quot;Current&quot;: 500,
-                   &quot;Maximum&quot;: 500
-               },
-               &quot;Effects&quot;: null
-           },
-           &quot;LeftLeg&quot;: {                               //左腿，腿容易被修，改大点
-               &quot;Health&quot;: {
-                   &quot;Current&quot;: 1000,
-                   &quot;Maximum&quot;: 1000
-               },
-               &quot;Effects&quot;: null
-           },
-           &quot;RightLeg&quot;: {                             //右腿
-               &quot;Health&quot;: {
-                   &quot;Current&quot;: 1000,
-                   &quot;Maximum&quot;: 1000
-               },
-               &quot;Effects&quot;: null
-           }
-       },
-       &quot;Energy&quot;: {                                   //饥饿
-           &quot;Current&quot;: 200,
-           &quot;Maximum&quot;: 200
-       },
-       &quot;Hydration&quot;: {                              //口渴
-           &quot;Current&quot;: 200,
-           &quot;Maximum&quot;: 200
+<pre><code class="language-js"> &quot;Health&quot;: {
+     &quot;BodyParts&quot;: {
+            &quot;Head&quot;: {                              //头部
+                &quot;Health&quot;: {
+                    &quot;Current&quot;: 500,           //目前血量，修改此处
+                    &quot;Maximum&quot;: 500        //最大血量，修改此处与上值保持相同
+                },
+                &quot;Effects&quot;: null
+            },
+            &quot;Chest&quot;: {                              //胸部
+                &quot;Health&quot;: {
+                    &quot;Current&quot;: 500,
+                    &quot;Maximum&quot;: 500
+                },
+                &quot;Effects&quot;: null
+            },
+            &quot;Stomach&quot;: {                           //胃部
+                &quot;Health&quot;: {
+                    &quot;Current&quot;: 500,
+                    &quot;Maximum&quot;: 500
+                },
+                &quot;Effects&quot;: null
+            },
+            &quot;LeftArm&quot;: {                              //左臂
+                &quot;Health&quot;: {
+                    &quot;Current&quot;: 500,
+                    &quot;Maximum&quot;: 500
+                },
+                &quot;Effects&quot;: null
+            },
+            &quot;RightArm&quot;: {                              //右臂
+                &quot;Health&quot;: {
+                    &quot;Current&quot;: 500,
+                    &quot;Maximum&quot;: 500
+                },
+                &quot;Effects&quot;: null
+            },
+            &quot;LeftLeg&quot;: {                               //左腿，腿容易被修，改大点
+                &quot;Health&quot;: {
+                    &quot;Current&quot;: 1000,
+                    &quot;Maximum&quot;: 1000
+                },
+                &quot;Effects&quot;: null
+            },
+            &quot;RightLeg&quot;: {                             //右腿
+                &quot;Health&quot;: {
+                    &quot;Current&quot;: 1000,
+                    &quot;Maximum&quot;: 1000
+                },
+                &quot;Effects&quot;: null
             }
+        },
+        &quot;Energy&quot;: {                                   //饥饿
+            &quot;Current&quot;: 200,
+            &quot;Maximum&quot;: 200
+        },
+        &quot;Hydration&quot;: {                              //口渴
+            &quot;Current&quot;: 200,
+            &quot;Maximum&quot;: 200
+             }
 },
 </code></pre>
 <blockquote>
 <p>注：不要直接复制代码，容易发生转码错误或漏符，对照修改即可！！！</p>
 </blockquote>
 <h3 id="2修改角色等级"><strong>&lt;2&gt;修改角色等级</strong></h3>
+<p>搜索&quot;level&quot;: 等级，比如我，我是30级，就搜索&quot;level&quot;: 30。角色等级不能随便修改，要对应到具体经验值才能生效</p>
+<pre><code class="language-js">&quot;Level&quot;: 70,                        //你要更改的等级
+&quot;Experience&quot;: 23129881,             //对应经验值
+</code></pre>
+<p>这里我不一一罗列，只举几个，需要可以到塔科夫wiki寻找对应值</p>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>10</th>
+<th>20</th>
+<th>30</th>
+<th>40</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经验</td>
+<td>57,124</td>
+<td>301,534</td>
+<td>850,880</td>
+<td>1,946,874</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>不要直接改999999999，会崩档！</p>
+</blockquote>
+<h3 id="3修改角色技能熟练度"><strong>&lt;3&gt;修改角色技能熟练度</strong></h3>
+<p>搜索skills</p>
+<pre><code class="language-js">{
+&quot;Id&quot;: &quot;BotReload&quot;,            //技能名称，只需要修改这一个地方
+				&quot;Progress&quot;: 5100,                //技能熟练点
+				&quot;PointsEarnedDuringSession&quot;: 0,           //上个战局获得多少技能点
+				&quot;LastAccess&quot;: 0         //时间戳
+},
+{
+				&quot;Id&quot;: &quot;Endurance&quot;,
+				&quot;Progress&quot;: 5100,
+				&quot;PointsEarnedDuringSession&quot;: 5.322952,
+				&quot;LastAccess&quot;: 1613384922
+},
+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>10</th>
+<th>15</th>
+<th>满级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经验</td>
+<td>1000</td>
+<td>1500</td>
+<td>5100</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>这里只举例两个技能，所有技能都要挨个修改。</p>
+</blockquote>
+<h3 id="4修改金钱"><strong>&lt;4&gt;修改金钱</strong></h3>
+<blockquote>
+<p>物品代码<br>
+卢布 = 5449016a4bdc2d6f028b456f，最大堆叠数500000<br>
+美元= 5696686a4bdc2da3298b456a，最大堆叠数50000<br>
+欧元= 569668774bdc2da2298b4568，最大堆叠数50000</p>
+</blockquote>
+<p>直接修改金钱很简单，在character.json中搜索金钱代码，找到对应堆，修改数量即可，卢布堆数太多，以欧元为例</p>
+<pre><code class="language-js">{
+				&quot;_id&quot;: &quot;I1171028574307059701IpIN&quot;,         //第一堆
+				&quot;_tpl&quot;: &quot;569668774bdc2da2298b4568&quot;,
+				&quot;parentId&quot;: &quot;I1162155503243033552ZRDR&quot;,
+				&quot;slotId&quot;: &quot;main&quot;,
+				&quot;location&quot;: {
+					&quot;x&quot;: 1,
+					&quot;y&quot;: 4,
+					&quot;r&quot;: &quot;Horizontal&quot;,
+					&quot;isSearched&quot;: true
+				},
+				&quot;upd&quot;: {
+					&quot;StackObjectsCount&quot;: 73,          //这里便是金钱数额，不要超过最大堆叠数，即小于等于50000
+					&quot;SpawnedInSession&quot;: true
+				}
+			},
+            //这里代码是否相连取决于在仓库中两堆金钱是否放在一起
+            {
+				&quot;_id&quot;: &quot;I1181916389378573958ahYA&quot;,
+				&quot;_tpl&quot;: &quot;569668774bdc2da2298b4568&quot;,
+				&quot;parentId&quot;: &quot;I1162155503243033552ZRDR&quot;,
+				&quot;slotId&quot;: &quot;main&quot;,
+				&quot;location&quot;: {
+					&quot;x&quot;: 2,
+					&quot;y&quot;: 4,
+					&quot;r&quot;: &quot;Horizontal&quot;,
+					&quot;isSearched&quot;: true
+				},
+				&quot;upd&quot;: {
+					&quot;StackObjectsCount&quot;: 84,
+					&quot;SpawnedInSession&quot;: true
+				}
+			},
+			{
+				&quot;_id&quot;: &quot;I11819163821248145100phJ&quot;,
+				&quot;_tpl&quot;: &quot;569668774bdc2da2298b4568&quot;,
+				&quot;parentId&quot;: &quot;I1162155503243033552ZRDR&quot;,
+				&quot;slotId&quot;: &quot;main&quot;,
+				&quot;location&quot;: {
+					&quot;x&quot;: 0,
+					&quot;y&quot;: 4,
+					&quot;r&quot;: &quot;Horizontal&quot;,
+					&quot;isSearched&quot;: true
+				},
+				&quot;upd&quot;: {
+					&quot;StackObjectsCount&quot;: 46,
+					&quot;SpawnedInSession&quot;: true
+				}
+			},
+</code></pre>
+<p><strong>修改最大堆叠数</strong><br>
+在db文件夹下的item文件中搜索物品代码，找到569668774bdc2da2298b4568.json。或者使用搜索软件全盘检索（我用的闪电搜索）</p>
+<pre><code class="language-js">{
+    //代码片段
+	&quot;_id&quot;: &quot;569668774bdc2da2298b4568&quot;,
+	&quot;_name&quot;: &quot;Евро&quot;,
+	&quot;_parent&quot;: &quot;543be5dd4bdc2deb348b4569&quot;,
+	&quot;_type&quot;: &quot;Item&quot;,
+	&quot;_props&quot;: {
+		&quot;Name&quot;: &quot;Euros&quot;,
+		&quot;ShortName&quot;: &quot;Euros&quot;,
+		&quot;Description&quot;: &quot;Несколько банкнот пока еще котирующихся российских рублей&quot;,
+		&quot;Weight&quot;: 0,
+		&quot;BackgroundColor&quot;: &quot;green&quot;,
+		&quot;Width&quot;: 1,
+		&quot;Height&quot;: 1,
+		&quot;StackMaxSize&quot;: 500000,   //最大堆叠数
+		&quot;Rarity&quot;: &quot;Superrare&quot;,
+		&quot;SpawnChance&quot;: 10,
+		&quot;CreditsPrice&quot;: 0,
+		&quot;ItemSound&quot;: &quot;item_money&quot;,
+		&quot;Prefab&quot;: {
+			&quot;path&quot;: &quot;assets/content/items/money/item_money_euro_small.bundle&quot;,
+			&quot;rcid&quot;: &quot;&quot;
+		},
+		&quot;UsePrefab&quot;: {
+			&quot;path&quot;: &quot;&quot;,
+			&quot;rcid&quot;: &quot;&quot;
+		},
+
+</code></pre>
+<h3 id="4修改商人好感度"><strong>&lt;4&gt;修改商人好感度</strong></h3>
+<blockquote>
+<p>商人代码<br>
+Prapor: 54cb50c76803fa8b248b4571<br>
+Ragman: 5ac3b934156ae10c4430e83c<br>
+Skier: 58330581ace78e27b8b10cee<br>
+Peacekeeper: 5935c25fb3acc3127c3d8cd9<br>
+Therapist: 54cb57776803fa99248b456e<br>
+Jaeger: 5c0647fdd443bc2504c2d371</p>
+</blockquote>
+<p>商人好感度等级分为四段，每段对应具体等级，等级段直接修改，总金额根据具体等级段的最低交易额修改</p>
+<pre><code class="language-js">&quot;TraderStandings&quot;: {
+		&quot;54cb50c76803fa8b248b4571&quot;: {
+			&quot;NextLoyalty&quot;: null,
+			&quot;currentLevel&quot;: 2,           //好感度等级段，分为四级，这里直接修改，如4
+			&quot;currentSalesSum&quot;: 926865,           //与商人买卖总金额，高于下方的买卖总金额，参照等级段修改
+			&quot;currentStanding&quot;: 0.2,          //交易中获得的总积分
+			&quot;display&quot;: true,
+			&quot;loyaltyLevels&quot;: {
+				&quot;0&quot;: {       //这是I级好感度，编程是从0开始计数的
+					&quot;minLevel&quot;: 1,         
+					&quot;minSalesSum&quot;: 0,
+					&quot;minStanding&quot;: 0
+				},
+				&quot;1&quot;: {         //  II级
+					&quot;minLevel&quot;: 15,          //这里是具体等级，与等级段有区别
+					&quot;minSalesSum&quot;: 750000,         //达到该等级最低的买卖金额
+					&quot;minStanding&quot;: 0.2
+				},
+				&quot;2&quot;: {             //   III级
+					&quot;minLevel&quot;: 22,
+					&quot;minSalesSum&quot;: 1500000,
+					&quot;minStanding&quot;: 0.35
+				},
+				&quot;3&quot;: {                 //皇冠好感度
+					&quot;minLevel&quot;: 33,
+					&quot;minSalesSum&quot;: 2300000,
+					&quot;minStanding&quot;: 0.5
+				}
+			}
+		},
+</code></pre>
 
             </div>
             
