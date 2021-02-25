@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://1691469549.github.io</id>
     <title>MyWeb</title>
-    <updated>2021-02-25T09:33:48.852Z</updated>
+    <updated>2021-02-25T09:36:26.567Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://1691469549.github.io"/>
     <link rel="self" href="https://1691469549.github.io/atom.xml"/>
@@ -22,7 +22,7 @@
 <!-- more -->
 <h3 id="1修改角色血量通用"><strong>&lt;1&gt;修改角色血量（通用）</strong></h3>
 <p>在character.json文件中搜索Health，对照代码修改对应身体部位目前血量和最大血量值即可，二者相等，数值无限制，下值供参考</p>
-<pre><code class="language-JavaScript"> &quot;Health&quot;: {
+<pre><code class="language-Java"> &quot;Health&quot;: {
      &quot;BodyParts&quot;: {
             &quot;Head&quot;: {                              //头部
                 &quot;Health&quot;: {
